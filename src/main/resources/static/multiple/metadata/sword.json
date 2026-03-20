@@ -1,0 +1,16 @@
+{
+  "id": 7,
+  "s3Key": "sword.glb",
+  "name": "Great Claymore",
+  "xOffset": 0,
+  "yOffset": 0.3,
+  "zOffset": 0,
+  "interaction": {
+    "rotateX": true,
+    "rotateY": true,
+    "rotateZ": true,
+    "transformX": true,
+    "transformY": true,
+    "transformZ": true
+  }
+}

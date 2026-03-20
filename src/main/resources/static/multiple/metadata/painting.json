@@ -1,0 +1,13 @@
+{
+  "id":5,
+  "s3Key": "painting.glb",
+  "name": "Painting",
+  "xOffset": 1,
+  "yOffset": 0,
+  "zOffset": 1,
+  "fileSize": 57800000,
+  "interaction": {
+    "transformZ": true,
+    "rotateY": true
+  }
+}

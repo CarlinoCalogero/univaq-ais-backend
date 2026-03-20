@@ -1,0 +1,13 @@
+{
+  "id":6,
+  "s3Key": "house.glb",
+  "name": "House",
+  "xOffset": 0,
+  "yOffset": 0.3,
+  "zOffset": 0,
+  "fileSize": 107000000,
+  "interaction": {
+    "transformX": true,
+    "transformY": true
+  }
+}

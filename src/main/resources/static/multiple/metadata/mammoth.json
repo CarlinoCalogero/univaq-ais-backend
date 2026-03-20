@@ -1,0 +1,9 @@
+{
+  "id":3,
+  "s3Key": "mammoth.glb",
+  "name": "Mammoth",
+  "xOffset": 1,
+  "yOffset": -0.5,
+  "zOffset": 1,
+  "fileSize": 37200000
+}

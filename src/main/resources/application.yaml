@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: "AIS Backend"
+
+server:
+  port: 8080
+
+aws:
+  region: eu-north-1
+  bucket:
+    name: aws-s3-ais-bucket

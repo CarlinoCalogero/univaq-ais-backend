@@ -1,0 +1,16 @@
+{
+  "id": 9,
+  "s3Key": "xrglasses.glb",
+  "name": "Vusix Glasses",
+  "xOffset": 0,
+  "yOffset": 0.5,
+  "zOffset": 0,
+  "interaction": {
+    "rotateX": true,
+    "rotateY": true,
+    "rotateZ": true,
+    "transformX": true,
+    "transformY": true,
+    "transformZ": true
+  }
+}

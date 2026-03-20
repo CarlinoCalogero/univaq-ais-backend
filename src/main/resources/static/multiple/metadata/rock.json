@@ -1,0 +1,13 @@
+{
+  "id":4,
+  "s3Key": "rock.glb",
+  "name": "Rock",
+  "xOffset": 0,
+  "yOffset": 0.5,
+  "zOffset": 0,
+  "fileSize": 53000000,
+  "interaction": {
+    "transformY": true,
+    "rotateY": true
+  }
+}
