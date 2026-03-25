@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Generated;
 
 import java.io.Serializable;
-import java.util.Arrays;
 
 public class Model implements Serializable {
     @JsonIgnore
@@ -20,33 +19,23 @@ public class Model implements Serializable {
     private Float yoffset;
     @JsonProperty("zOffset")
     private Float zoffset;
-    private byte[] base64Content = null;
+    private String presignedUrl;
     private long fileSize;
     private Interaction interaction;
-
-    public void setBase64Content(byte[] base64Content) {
-        this.base64Content = base64Content;
-        if (base64Content != null) {
-            this.fileSize = (long) base64Content.length;
-        } else {
-            this.fileSize = 0L;
-        }
-
-    }
 
     @Generated
     public Model() {
     }
 
     @Generated
-    public Model(final String id, final String s3Key, final String name, final Float xoffset, final Float yoffset, final Float zoffset, final byte[] base64Content, final long fileSize, final Interaction interaction) {
+    public Model(final String id, final String s3Key, final String name, final Float xoffset, final Float yoffset, final Float zoffset, final String presignedUrl, final long fileSize, final Interaction interaction) {
         this.id = id;
         this.s3Key = s3Key;
         this.name = name;
         this.xoffset = xoffset;
         this.yoffset = yoffset;
         this.zoffset = zoffset;
-        this.base64Content = base64Content;
+        this.presignedUrl = presignedUrl;
         this.fileSize = fileSize;
         this.interaction = interaction;
     }
@@ -82,8 +71,8 @@ public class Model implements Serializable {
     }
 
     @Generated
-    public byte[] getBase64Content() {
-        return this.base64Content;
+    public String getPresignedUrl() {
+        return this.presignedUrl;
     }
 
     @Generated
@@ -119,6 +108,11 @@ public class Model implements Serializable {
     @Generated
     public void setZoffset(final Float zoffset) {
         this.zoffset = zoffset;
+    }
+
+    @Generated
+    public void setPresignedUrl(final String presignedUrl) {
+        this.presignedUrl = presignedUrl;
     }
 
     @Generated
@@ -204,24 +198,32 @@ public class Model implements Serializable {
                     return false;
                 }
 
-                if (!Arrays.equals(this.getBase64Content(), other.getBase64Content())) {
-                    return false;
-                } else {
-                    Object this$interaction = this.getInteraction();
-                    Object other$interaction = other.getInteraction();
-                    if (this$interaction == null) {
-                        if (other$interaction != null) {
-                            return false;
-                        }
-                    } else if (!this$interaction.equals(other$interaction)) {
+
+                Object this$presignedUrl = this.getPresignedUrl();
+                Object other$presignedUrl = other.getPresignedUrl();
+                if (this$presignedUrl == null) {
+                    if (other$presignedUrl != null) {
                         return false;
                     }
-
-                    return true;
+                } else if (!this$presignedUrl.equals(other$presignedUrl)) {
+                    return false;
                 }
+
+                Object this$interaction = this.getInteraction();
+                Object other$interaction = other.getInteraction();
+                if (this$interaction == null) {
+                    if (other$interaction != null) {
+                        return false;
+                    }
+                } else if (!this$interaction.equals(other$interaction)) {
+                    return false;
+                }
+
+                return true;
             }
         }
     }
+
 
     @Generated
     protected boolean canEqual(final Object other) {
@@ -246,7 +248,8 @@ public class Model implements Serializable {
         result = result * 59 + ($id == null ? 43 : $id.hashCode());
         Object $name = this.getName();
         result = result * 59 + ($name == null ? 43 : $name.hashCode());
-        result = result * 59 + Arrays.hashCode(this.getBase64Content());
+        Object $presignedUrl = this.getPresignedUrl();
+        result = result * 59 + ($presignedUrl == null ? 43 : $presignedUrl.hashCode());
         Object $interaction = this.getInteraction();
         result = result * 59 + ($interaction == null ? 43 : $interaction.hashCode());
         return result;
@@ -255,6 +258,6 @@ public class Model implements Serializable {
     @Generated
     public String toString() {
         String var10000 = this.getId();
-        return "Model(id=" + var10000 + ", s3Key=" + this.getS3Key() + ", name=" + this.getName() + ", xoffset=" + this.getXoffset() + ", yoffset=" + this.getYoffset() + ", zoffset=" + this.getZoffset() + ", base64Content=" + Arrays.toString(this.getBase64Content()) + ", fileSize=" + this.getFileSize() + ", interaction=" + String.valueOf(this.getInteraction()) + ")";
+        return "Model(id=" + var10000 + ", s3Key=" + this.getS3Key() + ", name=" + this.getName() + ", xoffset=" + this.getXoffset() + ", yoffset=" + this.getYoffset() + ", zoffset=" + this.getZoffset() + ", presignedUrl=" + this.getPresignedUrl() + ", fileSize=" + this.getFileSize() + ", interaction=" + String.valueOf(this.getInteraction()) + ")";
     }
 }
